@@ -1,4 +1,8 @@
 # TagKit
+[![Tests](https://github.com/rickhohler/TagKit/actions/workflows/test.yml/badge.svg)](https://github.com/rickhohler/TagKit/actions/workflows/test.yml)
+[![Documentation](https://github.com/rickhohler/TagKit/actions/workflows/docs.yml/badge.svg)](https://github.com/rickhohler/TagKit/actions/workflows/docs.yml)
+[![codecov](https://codecov.io/gh/rickhohler/TagKit/branch/main/graph/badge.svg)](https://codecov.io/gh/rickhohler/TagKit)
+
 
 **TagKit** is a Swift framework designed for handling tags and tag extraction from various data sources.
 

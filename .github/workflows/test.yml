@@ -1,0 +1,27 @@
+name: Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: macos-13
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Run Tests with Code Coverage
+      run: swift test --enable-code-coverage
+      
+    - name: Upload Coverage
+      # Example of how one might convert/upload info, 
+      # or just ensuring it generated the profile.
+      run: |
+        xcrun llvm-cov export -format="lcov" \
+          .build/debug/TagKitPackageTests.xctest/Contents/MacOS/TagKitPackageTests \
+          -instr-profile .build/debug/codecov/default.profdata \
+          > info.lcov
+      continue-on-error: true # Don't fail if path differs slightly on CI env

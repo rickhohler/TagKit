@@ -1,0 +1,26 @@
+name: Documentation
+
+on:
+  push:
+    branches: [ main ]
+    tags: 
+      - '*'
+
+jobs:
+  build-docs:
+    runs-on: macos-13
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Verify DocC Plugin
+      run: swift package resolve
+      
+    - name: Build Documentation
+      run: |
+        swift package --allow-writing-to-directory ./docs \
+          generate-documentation --target TagKit \
+          --disable-indexing \
+          --transform-for-static-hosting \
+          --hosting-base-path TagKit \
+          --output-path ./docs
