@@ -58,6 +58,14 @@ let customProcessor = ProcessorBuilder<PlatformImage>()
 - `TagCore`: Defines the fundamental `Tag` types.
 - `TagExtraction`: Logic for parsing and extracting tags.
 
+## Contributing
+
+At this time, `TagKit` is closed to external contributions.
+
+**All issues, bugs, and feature requests are tracked via [GitHub Issues](https://github.com/rickhohler/TagKit/issues).**
+
+Please check existing issues before filing a new one.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
