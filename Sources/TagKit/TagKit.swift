@@ -33,4 +33,10 @@ public struct TagKit {
     public static func makeTextProcessor() -> TextTagger {
         return TextTagger()
     }
+    
+    /// Creates a builder for constructing a custom processor pipeline.
+    /// - Returns: A new `ProcessorBuilder` instance.
+    public static func makePipeline<Input>() -> ProcessorBuilder<Input> {
+        return ProcessorBuilder<Input>()
+    }
 }
