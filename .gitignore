@@ -1,0 +1,18 @@
+# Xcode
+.DS_Store
+*/build/
+*.derivedData
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+*.xcworkspace/*
+!*.xcworkspace/contents.xcworkspacedata
+.swiftpm/xcode/
+.swiftpm/configuration/
+.netrc
+
+# Swift Package Manager
+.build/
+Package.resolved
+
+# CocoaPods
+Pods/
