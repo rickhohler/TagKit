@@ -3,6 +3,7 @@
 [![Documentation](https://github.com/rickhohler/TagKit/actions/workflows/docs.yml/badge.svg)](https://github.com/rickhohler/TagKit/actions/workflows/docs.yml)
 [![codecov](https://codecov.io/gh/rickhohler/TagKit/branch/main/graph/badge.svg)](https://codecov.io/gh/rickhohler/TagKit)
 
+[![Release](https://img.shields.io/github/v/release/rickhohler/TagKit)](https://github.com/rickhohler/TagKit/releases)
 
 **TagKit** is a Swift framework designed for handling tags and tag extraction from various data sources.
 
@@ -17,7 +18,7 @@ Add `TagKit` to your `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/rickhohler/TagKit.git", from: "0.1.0-beta")
+    .package(url: "https://github.com/rickhohler/TagKit.git", from: "<latest_version>")
 ]
 ```
 
