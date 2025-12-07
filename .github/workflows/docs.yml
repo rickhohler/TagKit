@@ -13,6 +13,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     
+    - name: Verify Swift Version
+      run: swift --version
+
     - name: Verify DocC Plugin
       run: swift package resolve
       
