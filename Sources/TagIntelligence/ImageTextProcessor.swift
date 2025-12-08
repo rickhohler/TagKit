@@ -18,10 +18,17 @@ public class ImageTextProcessor: TagProcessor {
     
     public func process(_ image: PlatformImage) async throws -> [Tag] {
         return try await withCheckedThrowingContinuation { continuation in
+            #if canImport(AppKit)
             guard let cgImage = image.cgImage(forProposedRect: nil, context: nil, hints: nil) else {
                 continuation.resume(throwing: ProcessingError.invalidImage)
                 return
             }
+            #elseif canImport(UIKit)
+            guard let cgImage = image.cgImage else {
+                continuation.resume(throwing: ProcessingError.invalidImage)
+                return
+            }
+            #endif
             
             let request = VNRecognizeTextRequest { request, error in
                 if let error = error {

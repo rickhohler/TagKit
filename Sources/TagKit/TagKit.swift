@@ -1,5 +1,5 @@
 import Foundation
-import TagCore
+@_exported import TagCore
 import TagIntelligence
 import TagExtraction
 
